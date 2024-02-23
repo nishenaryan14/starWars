@@ -1,3 +1,18 @@
+import axios from "axios";
+export const fetchPlanetsData = async (page, setPlanets, setLoading) => {
+  setLoading(true);
+  try {
+    const res = await axios.get(
+      `https://swapi.dev/api/planets/?page=${page}&format=json`
+    );
+    const { data } = res;
+    setPlanets(data.results);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    setLoading(false);
+  }
+};
 export const fetchResidents = async (urls) => {
   try {
     const responses = await Promise.all(

@@ -5,35 +5,20 @@ import Pagination from "../components/Pagination";
 import CardContainer from "../components/CardContainer";
 import { useLoading } from "../context/LoadingContext";
 import { usePlanets } from "../context/PlanetContext";
+import { fetchPlanetsData } from "../../apiCalls";
 
 const Home = () => {
-  const { page, setPage } = usePage();
+  const { page } = usePage();
   const { planets, setPlanets } = usePlanets();
   const { setLoading } = useLoading();
-  const [dataFetched, setDataFetched] = useState(false);
 
   useEffect(() => {
     fetchPlanets();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [page]);
 
-  const fetchPlanets = async () => {
-    console.log(page);
-    setLoading(true);
-    try {
-      const res = await axios.get(
-        `https://swapi.dev/api/planets/?page=${page}&format=json`
-      );
-      console.log(res);
-      setDataFetched(true);
-      const { data } = res;
-      console.log(data.results);
-      setPlanets(data.results);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
+  const fetchPlanets = () => {
+    fetchPlanetsData(page, setPlanets, setLoading);
   };
 
   return (

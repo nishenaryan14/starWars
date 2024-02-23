@@ -17,8 +17,8 @@ export const Card = ({ planet, onClick }) => {
         <img src={terrainImageUrl} alt={name} />
       </div>
       <div>
-        <span>{terrain}</span>
         <h3>{name}</h3>
+        <span>{terrain}</span>
         <span>{climate}</span>
         <br />
         <span>{population}</span>

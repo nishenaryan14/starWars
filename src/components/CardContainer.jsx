@@ -9,10 +9,8 @@ const CardContainer = ({ planets }) => {
   const { setResidents, setPlanetName } = useResidents();
   const { loading, setLoading } = useLoading();
   const handleClick = async (planet) => {
-    console.log(planet.name);
     setLoading(true);
     const data = await fetchResidents(planet.residents);
-    console.log(data);
     setPlanetName(planet.name);
     setResidents(data);
     setLoading(false);
