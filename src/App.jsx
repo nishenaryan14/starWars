@@ -2,11 +2,11 @@ import "./style.scss";
 import Home from "./pages/Home";
 import PlanetInfo from "./pages/PlanetInfo";
 import LoadingBar from "react-top-loading-bar";
-import { PageProvider } from "./PageContext";
-import { ResidentProvider } from "./ResidentContext";
+import { PageProvider } from "./context/PageContext";
+import { ResidentProvider } from "./context/ResidentContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useLoading } from "./LoadingContext";
-import { PlanetsProvider } from "./PlanetContext";
+import { useLoading } from "./context/LoadingContext";
+import { PlanetsProvider } from "./context/PlanetContext";
 
 function App() {
   const { loading } = useLoading();

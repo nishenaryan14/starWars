@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { usePage } from "../PageContext";
+import { usePage } from "../context/PageContext";
 import Pagination from "../components/Pagination";
 import CardContainer from "../components/CardContainer";
-import { useLoading } from "../LoadingContext";
-import { usePlanets } from "../PlanetContext";
+import { useLoading } from "../context/LoadingContext";
+import { usePlanets } from "../context/PlanetContext";
 
 const Home = () => {
   const { page, setPage } = usePage();

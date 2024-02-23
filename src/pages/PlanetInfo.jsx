@@ -1,5 +1,5 @@
-import { useLoading } from "../LoadingContext";
-import { useResidents } from "../ResidentContext";
+import { useLoading } from "../context/LoadingContext";
+import { useResidents } from "../context/ResidentContext";
 import LoadingBar from "react-top-loading-bar";
 
 export default function PlanetInfo() {
@@ -26,7 +26,7 @@ export default function PlanetInfo() {
                 </div>
               ))
             ) : (
-              <div>NO RESIDENTS</div>
+              <div className="noResident">NO RESIDENTS</div>
             )}
           </div>
         </>

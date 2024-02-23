@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { fetchResidents } from "../../apiCalls";
-import { useResidents } from "../ResidentContext";
+import { useResidents } from "../context/ResidentContext";
 import { Card } from "./Card";
-import { useLoading } from "../LoadingContext";
+import { useLoading } from "../context/LoadingContext";
 
 const CardContainer = ({ planets }) => {
   const nav = useNavigate();

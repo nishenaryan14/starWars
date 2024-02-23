@@ -1,4 +1,4 @@
-import { usePage } from "../PageContext";
+import { usePage } from "../context/PageContext";
 
 export default function Pagination() {
   // Use the usePage hook to access the setPage function from the PageContext
