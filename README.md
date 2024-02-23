@@ -8,7 +8,7 @@ To run this app locally, follow these steps:
 
 1. Clone the repository to your local machine:
 
-git clone <repository_url>
+git clone https://github.com/nishenaryan14/starWars.git
 
 2. Navigate to the project directory:
 
@@ -18,26 +18,29 @@ cd star-wars-api-react-app
 
 npm install
 
-Running the App
+## Running the App
+
 Once the dependencies are installed, you can run the app using the following command:
 
 npm run dev
 
 This command will start a development server, and you can view the app by navigating to http://localhost:5173 in your web browser.
 
-Project Structure
+## Project Structure
 
 The project is structured in a clear and organized manner:
 Pages: Contains the main pages of the application, each representing a different view or route.
 Contexts: Utilizes React Context API for managing global state.
 Components: Reusable UI components used across different pages.
 
-API Integration
+## API Integration
 
 All API calls to the Star Wars API are encapsulated in the apiCall.js file. This helps in keeping the codebase clean and maintaining a centralized location for managing API interactions.
 
-Contributing
+## Contributing
+
 If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. Any contributions are welcome!
 
-License
+## License
+
 This project is licensed under the MIT License. Feel free to modify and distribute it as per the terms of the license.
